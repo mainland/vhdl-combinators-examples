@@ -1,0 +1,13 @@
+resolver: lts-14.27
+local-bin-path: bin
+extra-deps:
+- hgmp-0.1.1
+- long-double-0.1.1
+- ref-fd-0.4.0.2
+- rounded-1.1
+- git: https://github.com/mainland/fixed-q.git
+  commit: 963b545ce4493cab2c4fc51ab8bfb88804c7a73f
+- git: https://github.com/mainland/language-vhdl-quote.git
+  commit: bdb5df7c609070da61cc417ca38f7d6a142e5355
+- git: https://github.com/mainland/vhdl-codegen.git
+  commit: de7e4e0e436eb5bb98a2eb3ba3046d139006f733

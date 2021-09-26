@@ -1,0 +1,48 @@
+name:          vhdl-gen
+version:       0.1
+cabal-version: >= 1.10
+build-type: Simple
+
+library
+  default-language: Haskell2010
+
+  build-depends:
+    base                   >= 4.5   && < 5,
+    containers             >= 0.4   && < 0.7,
+    exception-mtl          >= 0.3   && < 0.5,
+    exception-transformers >= 0.3   && < 0.5,
+    extra                  >= 1.6   && < 1.8,
+    fixed-q                >= 0.1   && < 0.2,
+    haskell-src-exts       >= 1.21  && < 1.24,
+    haskell-src-meta       >= 0.4   && < 0.9,
+    language-vhdl-quote    >= 0.1   && < 0.2,
+    mainland-pretty        >= 0.6   && < 0.8,
+    mtl                    >= 2.0   && < 3,
+    primitive              >= 0.6   && < 0.8,
+    ref-fd                 >= 0.3   && < 0.6,
+    srcloc                 >= 0.4   && < 0.7,
+    syb                    >= 0.3   && < 0.8,
+    symbol                 >= 0.1   && < 0.3,
+    text                   >= 1.2   && < 1.3,
+    transformers           >= 0.2   && < 0.6
+
+
+  include-dirs: .
+
+  ghc-options: -Wall
+
+executable incrementer
+  main-is: Main.hs
+  default-language: Haskell2010
+
+  build-depends:
+    vhdl-codegen        >= 0.1 && < 0.2,
+    base                >= 4.5 && < 5,
+    containers          >= 0.5 && < 0.7,
+    fixed-q             >= 0.1 && < 0.2,
+    language-vhdl-quote >= 0.1 && < 0.2,
+    mainland-pretty     >= 0.7 && < 0.8,
+    srcloc              >= 0.4 && < 0.7
+
+  other-modules:
+    Opt
